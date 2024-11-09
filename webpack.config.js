@@ -11,18 +11,16 @@ module.exports = {
   devServer: {
     static: './dist',
   },
-
   plugins: [
     new HtmlBundlerPlugin({
-     // all the necessary options are in one place
       entry: {
-        index: 'src/index.html', // save generated HTML into dist/index.html
+        index: 'src/index.html',
       },
       js: {
-        filename: 'js/[name].[contenthash:8].js', // JS output filename
+        filename: 'js/[name].[contenthash:8].js',
       },
       css: {
-        filename: 'css/[name].[contenthash:8].css', // CSS output filename
+        filename: 'css/[name].[contenthash:8].css',
       },
     }),
   ],
